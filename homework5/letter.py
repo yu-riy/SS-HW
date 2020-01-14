@@ -30,6 +30,6 @@ def func(thestring):
         mass.append(words[wc])
     #Сводим результат и выводим его на экран        
     result = (" ".join(mass)).capitalize()
-    print(f"\n {result}")
+    print(f"\n {result}.")
 
 func(substring)
