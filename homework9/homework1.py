@@ -9,15 +9,19 @@ def print_file(filename):
     table_format(mass)
     fd.close()
     
-  
+#Форматированный вывод таблицы  
 def table_format(body):
+    #количество элементов
     lenght = len(body[0])
+    #инициализация списка для определения ширины элементов
     width = [0]*lenght
     output = ""
+    #наполнения списка по максимальной ширине элементов
     for row in body:
         for j, col in enumerate(row):
             width[j] = max(width[j], len(col))
-      
+
+    #форматированный вывод  
     for row in body:
         for each in range(len(row)):
             output += "| {:{}}".format(row[each], width[each])
